@@ -1,0 +1,37 @@
+@use "../../assets/scss/styles.scss" as *;
+
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.2rem 0.2rem 1rem;
+  border-radius: 2rem;
+  background-color: $color-brand-3;
+
+  &__name {
+    margin-right: 0.5rem;
+    color: $color-white;
+    font-weight: 600;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2rem;
+    background-color: $color-white;
+    color: $color-brand-3;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &--value-number {
+    .tag {
+      &__value {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}

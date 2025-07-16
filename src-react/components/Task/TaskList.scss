@@ -1,0 +1,71 @@
+@use "../../assets/scss/styles.scss" as *;
+
+.task-list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  list-style: none;
+
+  &__wrapper {
+    height: calc(5.6rem * 3);
+    margin: 2rem;
+    overflow-y: scroll;
+  }
+
+  &__item {
+    padding: 0.5rem;
+
+    /* React Transition Group animations for task-list */
+    &.task-list-enter {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+    &.task-list-enter-active {
+      transform: scale(1);
+      opacity: 1;
+      transform-origin: left center;
+      transition:
+        opacity 0.3s,
+        transform 0.3s;
+    }
+
+    &.task-list-exit {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    &.task-list-exit-active {
+      transform: scale(0.5);
+      opacity: 0;
+      position: absolute;
+      transform-origin: left center;
+      transition:
+        opacity 0.3s,
+        transform 0.3s;
+    }
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: $color-light;
+    font-size: 2rem;
+    line-height: 100%;
+    text-align: center;
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .icon {
+      width: 15rem;
+      height: 10rem;
+    }
+  }
+}

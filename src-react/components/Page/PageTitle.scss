@@ -1,0 +1,15 @@
+@use "../../assets/scss/styles.scss" as *;
+
+.page-title {
+  margin-bottom: 2rem;
+  color: $color-white;
+  font-family: $font-brand-1;
+  font-size: 6.4rem;
+  font-weight: 600;
+  line-height: 100%;
+  text-align: center;
+
+  @include media("sm") {
+    font-size: 12vw;
+  }
+}

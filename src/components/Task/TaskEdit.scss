@@ -1,0 +1,47 @@
+@use "../../assets/scss/styles.scss" as *;
+
+.task-edit {
+  &__title {
+    margin-bottom: 2rem;
+    color: $color-brand-3;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__subtitle {
+    color: $color-brand-3;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__field {
+    padding: 1rem;
+    border: 0.2rem solid $color-brand-3;
+    border-radius: 0.5rem;
+    outline: none;
+    color: $color-brand-3;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &:focus {
+      border-color: $color-brand-2;
+    }
+  }
+
+  &__button-save {
+    align-self: center;
+  }
+}
